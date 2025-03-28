@@ -1,8 +1,6 @@
 pipeline {
     agent any
 
-    environment {}
-
     stages {
         stage('Build and Start LocalStack Container') {
             steps {
@@ -24,7 +22,22 @@ pipeline {
                     '''
                 }
             }
-
+        }
+        stage('Run Terraform Test') {
+            steps {
+                script {
+                    // Build with both latest and build-specific tags
+                    sh "terraform test"
+                }
+            }
+        }
+        stage('Stop and Delete LocalStack Container') {
+            steps {
+                script {
+                    // Build with both latest and build-specific tags
+                    sh "terraform test"
+                }
+            }
         }
     }
 
