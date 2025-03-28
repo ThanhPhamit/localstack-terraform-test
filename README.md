@@ -187,3 +187,7 @@ docker compose down
 ## GitHub Actions
 
 We provide an example how to integrate LocalStack and Terraform Test in a CI/CD pipeline with [GitHub Actions](.github/workflows/localstack-terraform-test.yml).
+
+# Author
+
+Pham Van Thanh
